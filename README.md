@@ -1,6 +1,10 @@
 # bscope
 Analysis of Bilsufite-Seq data.
 
+
+bscope is designed to fulfill two needs encountered during BS-Seq studies. 
+First, often various computational tools used in pipeline are incompatible in terms of file structures. bscope transforms two widely encountered methylation count files bismarkcov and bssnper (post snp removal) files and makes them compatible for two of the most used tools to analyse differential methylation: DSS and methylkit.
+
 bscope is meant to convert BS-SNPer and Bismar .COV output files into files compatible with the methylkit and DSS R packages. Both of which are comminly used to identify DMCs and DMRs in methylomics studies. (see the BS_conversion() method)
 
 bscope accepts CpG or CpH methylation files
