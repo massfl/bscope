@@ -2,14 +2,15 @@
 Analysis of Bilsufite-Seq data.
 
 
-bscope is designed to fulfill two needs encountered during BS-Seq studies. 
-First, often various computational tools used in pipeline are incompatible in terms of file structures. bscope transforms two widely used methylation count files bismark.cov and bssnper (post snp removal) files and makes them compatible with two of the most popular used tools to detect differential methylation: DSS and methylkit.
+bscope is designed to fulfill two needs encountered during BS-Seq studies:
+
+	First, often various computational tools used in pipeline are incompatible in terms of file structures. bscope transforms two widely used methylation count files bismark.cov and bssnper (post snp removal) files and makes them compatible with two of the most popular used tools to detect differential methylation: DSS and methylkit.
+
+	Second, it is often necessary to visualize the data to get a sense of their overall quality, to that end bscope may output a graphical report on read coverage and methylation levels, see the Coverage_plot() and BS_report() functions respectively.
 
 bscope accepts CpG or CpH methylation files
 
-bscope may output a graphical report on read coverage and methylation levels, see the Coverage_plot() and BS_report() functions respectively.
-
-BScope is a Python3 module and requires Pandas, matplotlib, seaborn, numpy, scipy and sklearn
+bscope is a Python3 module and requires Pandas, matplotlib, seaborn, numpy, scipy and sklearn
 
 
 
