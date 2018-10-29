@@ -120,11 +120,16 @@ this function is automatically called when report = True in the BS_conversion() 
 In the following example we will:
 1-instanciate a BsCope object from two BS-Snper output txt files.
 2-Visualize CpG counts as function of read coverage
-3-Run the conversion from BS-SNPer output to DSS compatible file and generate a visual report
+3-Run the conversion from BS-SNPer output files to DSS compatible files (A) and generate a visual report (B)
 
 1- bscope_test = BsCope(["/Users/username/bscope_test_file/bssnper_sample1.txt", "/Users/username/bscope_test_file/bssnper_sample2.txt"], "bssnper", ["sample1", "sample2"], "BSCope_test", "CG")
 
-2- bscope_test.Coverage_plot("/Users/username/bscope_test_file/")
+2- bscope_test.Coverage_plot("/Users/username/bscope_test_file/", coverage_lims = (1, 20))
 ![bscope_test_cg_coverage_plot](https://user-images.githubusercontent.com/36674021/47658906-38289480-db6a-11e8-9105-badf572c87aa.png)
-3- bscope_test.BS_conversion("DSS", "/Users/username/bscope_test_file/", report = True, min_coverage = 10)
 
+3- bscope_test.BS_conversion("DSS", "/Users/username/bscope_test_file/", report = True, min_coverage = 10)
+Output:
+
+A- DSS compatible files.
+chr | pos | N | X
+-----|-------|------|-------
