@@ -93,16 +93,20 @@ the BS_conversion() method is applied on the BsCope object to convert the file i
 
 other functions
 
-BS-view()
-the BS_view function() generates a visual report containing statistics on the cytosine population
-this function is automatically called when report = True in the BS_conversion() method
+**BS_report()**
 
-	bscope.BS_view(input_, input_type, sample_name, context)
+the BS_report function() generates a visual report containing statistics on the cytosine population
+this function is automatically called when report = True in the BS_conversion() method.
+**Importantly, this function automatically filters cytosines that are found in all samples before runing ploting functions**
+
+	bscope.BS_report(input_, input_type, output_file_path, output_file_name, context)
 		
 		input_:
 			the output of BS_conversion() method stored in a variable (a list of pandas dataframes)
-		input_type = « DSS » or « methylkit »
-		sample_name = a list of sample names
+		input_type: « DSS » or « methylkit »
+		output_file_path: path to save the output report image
+		output_file_name: name of the output file (infered from self.experiment)
+		context: cytosine contex "CG" or "CH" (infered from self.context)
 
 	output:
 		a png image with 
