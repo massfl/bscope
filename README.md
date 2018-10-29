@@ -1,5 +1,5 @@
 # bscope
-Analysis of Bilsufite-Seq data.
+Analysis of genome wide Bisulfite-Sequencing data.
 
 
 bscope is designed to fulfill two needs encountered during BS-Seq studies:
