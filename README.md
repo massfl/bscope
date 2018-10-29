@@ -163,3 +163,4 @@ chr1|3003898|15.0|11.0
 
 B- Visual Report
 
+![bscope_test_bscope_test_cg_dss_on_bs_conversion_output - gzbscope_test_report_cg_bs_report](https://user-images.githubusercontent.com/36674021/47662515-707fa100-db71-11e8-8409-4c0505ef8f9c.png)
