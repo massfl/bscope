@@ -302,7 +302,7 @@ class BsCope:
 
 
 	
-	def Coverage_plot(self, output_path, output_file_name, coverage_lims = (1, 20)):
+	def Coverage_plot(self, output_path, coverage_lims = (1, 20)):
 		# add a function to visualize the data and decide which parameters to use when calling BS_conversion
 
 		if self.input_type == "bssnper":
@@ -363,8 +363,8 @@ class BsCope:
 		axes[0].set_ylabel("Cytosines count")
 
 
-		#save the figure as pdf file
-		figure.savefig("{}{}_{}_Coverage_plot.png".format(output_path, output_file_name, self.context))
+		#save the figure as png file
+		figure.savefig("{}{}_{}_Coverage_plot.png".format(output_path, self.experiment, self.context))
 
 
 
