@@ -134,7 +134,7 @@ def BS_report(input_, input_type, output_file_path, output_file_name, context):
 		##############################################
 		#start the plotting function
 		##first make a matplotlib figure
-		figure = plt.figure(figsize=(20, 20))
+		figure = plt.figure(figsize=(30, 30))
 
 		##############################################
 		#CpG count in each sample and in the concatenated table
@@ -230,7 +230,7 @@ def BS_report(input_, input_type, output_file_path, output_file_name, context):
 		#plot mean methylation average for each sample
 		ax = plt.subplot(3, 3, 6)
 		ax.boxplot(x = methylation_list, notch = True, labels = sample_names_list)
-		ax.set_ylabel("sample mean {}p{} methylation".format(context[0], context[1]))
+		ax.set_ylabel("sample {}p{} methylation".format(context[0], context[1]))
 		ax.set_ylim(0, 105)
 
 
@@ -525,6 +525,8 @@ class BsCope:
 
 
 		if report:
+
+			print("The output {} cytosine files are all done! now preparing the visual report...".format(self.input_type))
 
 			dataframes_and_names = list(zip(output_pandas_dataframes_list, self.name))
 
