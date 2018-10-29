@@ -114,3 +114,17 @@ this function is automatically called when report = True in the BS_conversion() 
 		-pearson correlation on methylation levels
 		-PCA analysis on mehylation levels (PCA scree plot and PCA plot)
 
+
+**EXAMPLE:**
+
+In the following example we will:
+1-instanciate a BsCope object from two BS-Snper output txt files.
+2-Visualize CpG counts as function of read coverage
+3-Run the conversion from BS-SNPer output to DSS compatible file and generate a visual report
+
+1- bscope_test = BsCope(["/Users/username/bscope_test_file/bssnper_sample1.txt", "/Users/username/bscope_test_file/bssnper_sample2.txt"], "bssnper", ["sample1", "sample2"], "BSCope_test", "CG")
+
+2- bscope_test.Coverage_plot("/Users/username/bscope_test_file/")
+
+3- bscope_test.BS_conversion("DSS", "/Users/username/bscope_test_file/", report = True, min_coverage = 10)
+
