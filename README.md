@@ -49,14 +49,15 @@ First an object of the BsCope class is instantiated:
 (2) method Coverage_plot()
 The Coverage_plot() method is applied on the BsCope object to generate a plot of Cytosine counts as a function of read coverage
 
-	object.Coverage_plot(output_path, output_file_name, coverage_lims = (1, 20))
+	object.Coverage_plot(output_path, coverage_lims = (1, 20))
 		.output_path
-		.output_file_name
+			path of the folder to store the final image into. The name of the image is infered from the self.experiment and 				self.context attributes
 		.coverage_lims = (1, 20)
+			a range of coverage values to calculate Cytosine count. e.g (1, 20) will count cytosines with coverage up to 20.
 
 
-(3) method BS_trans()
-the BS_conversion() method is appliedon the BsCope object to convert the file into the desired output (DSS or methylkit compatible):
+(3) method BS_conversion()
+the BS_conversion() method is applied on the BsCope object to convert the file into the desired output (DSS or methylkit compatible):
 	
 	object.BS_conversion(output_type,  output_file_path, min_coverage, report = True, header = False, compression = "gzip", line_terminator = « \n »)
 
@@ -64,7 +65,7 @@ the BS_conversion() method is appliedon the BsCope object to convert the file in
 			the type of format for the output file: "DSS" or "methylkit".
 
 		.output_file_path:
-			the path to the directory where to store the output file.
+			the path to the directory where to store the output files (one output file is created for each input file).
 
 		.report:
 			whether to call the BS_view() function on the final dataframes and output a graphical report including methylation levels, pearson correlation and PCA analysis, default = True
@@ -72,14 +73,20 @@ the BS_conversion() method is appliedon the BsCope object to convert the file in
 			filter cytosine to keep those with read coverage >= min_coverage
 		.header = boolean
 			Whether a header line should be added to the final file. False by default unless "DSS" output_type is chosen.
+			For DSS type output the following header is used:
+			chr 	pos	N	X
+			where chr: name of the cromosome
+			pos: genomic position in nucleotides
+			N: number of reads coverage this position
+			X: number of reads indicating methylation
 
-        .compression:
-            compression of the final output file. Possible values are: None, "gzip", "zip", "bz2", "xz".
+        	.compression:
+            		compression of the final output file. Possible values are: None, "gzip", "zip", "bz2", "xz".
 
-        .line_terminator:
-            by defaults "/n". can be any character supported by the pandas to_csv() method.https://pandas.pydata.org/pandas-docs/stable/generated/				    pandas.DataFrame.to_csv.html
+        	.line_terminator:
+           		 by defaults "/n". can be any character supported by the pandas to_csv() method.https://pandas.pydata.org				/pandas-docs/stable/generated/pandas.DataFrame.to_csv.html
 
-	Output: tsv files compatible with DSS or methylkit
+	--> Output: tsv files compatible with DSS or methylkit
 	if report = True a visual report, see below BS_view()
 
 
@@ -99,11 +106,11 @@ this function is automatically called when report = True in the BS_conversion() 
 
 	output:
 		a png image with 
-	-cytosine counts in eah sample and covered in all samples
-	-cytosine count per chromosome
-	-plot representing percent of cytosine bearing methylation in each sample
-	-count of cytosines per bins of methylation percent
-	-mean methylation per sample
-	-pearson correlation on methylation levels
-	-PCA analysis on mehylation levels (PCA scree plot and PCA plot)
+		-cytosine counts in eah sample and covered in all samples
+		-cytosine count per chromosome
+		-plot representing percent of cytosine bearing methylation in each sample
+		-count of cytosines per bins of methylation percent
+		-mean methylation per sample
+		-pearson correlation on methylation levels
+		-PCA analysis on mehylation levels (PCA scree plot and PCA plot)
 
