@@ -13,10 +13,11 @@ BScope is a Python3 module and requires Pandas, matplotlib, seaborn, numpy, scip
 
 
 
-USAGE
+**USAGE**
 
-(1) Class BsCope()
-First an object of the BsCope class is instantiated:
+**(1) Class BsCope()**
+
+An object of the BsCope class is instantiated:
 
 	object = bscope.BsCope(input_file_path, input_type, sample_name, experiment_name, context)
 
@@ -46,7 +47,8 @@ First an object of the BsCope class is instantiated:
 
 
 
-(2) method Coverage_plot()
+**(2) method Coverage_plot()**
+
 The Coverage_plot() method is applied on the BsCope object to generate a plot of Cytosine counts as a function of read coverage
 
 	object.Coverage_plot(output_path, coverage_lims = (1, 20))
@@ -56,10 +58,11 @@ The Coverage_plot() method is applied on the BsCope object to generate a plot of
 			a range of coverage values to calculate Cytosine count. e.g (1, 20) will count cytosines with coverage up to 20.
 
 
-(3) method BS_conversion()
+**(3) method BS_conversion()**
+
 the BS_conversion() method is applied on the BsCope object to convert the file into the desired output (DSS or methylkit compatible):
 	
-	object.BS_conversion(output_type,  output_file_path, min_coverage, report = True, header = False, compression = "gzip", line_terminator = « \n »)
+	object.BS_conversion(output_type,  output_file_path, min_coverage, report = True, header = False, compression = "gzip", 		line_terminator = « \n »)
 
 		.output_type:
 			the type of format for the output file: "DSS" or "methylkit".
@@ -68,7 +71,7 @@ the BS_conversion() method is applied on the BsCope object to convert the file i
 			the path to the directory where to store the output files (one output file is created for each input file).
 
 		.report:
-			whether to call the BS_view() function on the final dataframes and output a graphical report including methylation levels, pearson correlation and PCA analysis, default = True
+			whether to call the BS_view() function on the final dataframes and output a graphical report including 					methylation levels, pearson correlation and PCA analysis, default = True
 		.min_coverage:
 			filter cytosine to keep those with read coverage >= min_coverage
 		.header = boolean
@@ -91,7 +94,7 @@ the BS_conversion() method is applied on the BsCope object to convert the file i
 
 
 
-other functions
+**OTHER FUNCTIONS**
 
 **BS_report()**
 
