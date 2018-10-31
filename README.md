@@ -14,7 +14,6 @@ bscope accepts CpG or CpH methylation files
 bscope is a Python3 module and requires Pandas, matplotlib, seaborn, numpy, scipy and sklearn
 
 
-![bscope_diagram](https://user-images.githubusercontent.com/36674021/47803104-1d8c2200-dd08-11e8-990b-c00c543c236b.png)
 
 
 **USAGE**
@@ -177,7 +176,7 @@ B- Visual Report (.png file)
 
 
 
-References:
+**REFERENCES**
 
 1- Bismark: a flexible aligner and methylation caller for Bisulfite-Seq applications.
 Krueger F1, Andrews SR.
