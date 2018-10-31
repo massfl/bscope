@@ -180,14 +180,14 @@ B- Visual Report (.png file)
 **REFERENCES**
 
 1- Bismark: a flexible aligner and methylation caller for Bisulfite-Seq applications.
-Krueger F1, Andrews SR.
+Krueger F, Andrews SR.
 Bioinformatics. 2011 Jun 1;27(11):1571-2. doi: 10.1093/bioinformatics/btr167. Epub 2011 Apr 14.
 
 2-BS-SNPer: SNP calling in bisulfite-seq data.
-Gao S1, Zou D2, Mao L3, Liu H4, Song P5, Chen Y6, Zhao S7, Gao C8, Li X7, Gao Z7, Fang X7, Yang H7, Ørntoft TF9, Sørensen KD9, Bolund L1.Bioinformatics. 2015 Dec 15;31(24):4006-8. doi: 10.1093/bioinformatics/btv507. Epub 2015 Aug 28.
+Gao S, Zou D, Mao L, Liu H, Song P, Chen Y, Zhao S, Gao C, Li X, Gao Z, Fang X, Yang H, Ørntoft TF, Sørensen KD, Bolund L.Bioinformatics. 2015 Dec 15;31(24):4006-8. doi: 10.1093/bioinformatics/btv507. Epub 2015 Aug 28.
 
 3-A Bayesian hierarchical model to detect differentially methylated loci from single nucleotide resolution sequencing data.
-Feng H1, Conneely KN, Wu H.
+Feng H, Conneely KN, Wu H.
 Nucleic Acids Res. 2014 Apr;42(8):e69. doi: 10.1093/nar/gku154. Epub 2014 Feb 22.
 
 4-methylKit: a comprehensive R package for the analysis of genome-wide DNA methylation profiles.
