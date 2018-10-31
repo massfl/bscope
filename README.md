@@ -13,7 +13,8 @@ bscope accepts CpG or CpH methylation files
 
 bscope is a Python3 module and requires Pandas, matplotlib, seaborn, numpy, scipy and sklearn
 
-![bscope_diagram](https://user-images.githubusercontent.com/36674021/47804066-3eee0d80-dd0a-11e8-89d1-6875f98ba528.png)
+
+![bscope_diagram](https://user-images.githubusercontent.com/36674021/47804114-604ef980-dd0a-11e8-8fd8-f60c4bab37d8.png)
 
 
 **USAGE**
