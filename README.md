@@ -5,7 +5,7 @@ Analysis of genome wide Bisulfite-Sequencing data.
 
 bscope is designed to fulfill two needs encountered during BS-Seq studies:
 
--First, often various computational tools used in pipeline are incompatible in terms of file structures. bscope transforms two widely used methylation count files bismark.cov and bssnper (post snp removal) files and makes them compatible with two of the most popular used tools to detect differential methylation: DSS and methylkit.
+-First, often various computational tools used in pipeline are incompatible in terms of file structures. bscope transforms two widely used methylation count files bismark.cov (1) and bssnper (post snp removal) (2) files and makes them compatible with two of the most popular used tools to detect differential methylation: DSS(3)and methylkit(4).
 
 -Second, it is often necessary to visualize the data to get a sense of their overall quality, to that end bscope may output a graphical report on read coverage and methylation levels, see the Coverage_plot() and BS_report() functions respectively.
 
@@ -13,6 +13,8 @@ bscope accepts CpG or CpH methylation files
 
 bscope is a Python3 module and requires Pandas, matplotlib, seaborn, numpy, scipy and sklearn
 
+
+![bscope_diagram](https://user-images.githubusercontent.com/36674021/47803104-1d8c2200-dd08-11e8-990b-c00c543c236b.png)
 
 
 **USAGE**
@@ -172,3 +174,22 @@ chr1|3003898|15.0|11.0
 
 B- Visual Report (.png file)
 ![bscope_test_bscope_test_cg_dss_on_bs_conversion_output - gzbscope_test_report_cg_bs_report](https://user-images.githubusercontent.com/36674021/47662515-707fa100-db71-11e8-8409-4c0505ef8f9c.png)
+
+
+
+References:
+
+1- Bismark: a flexible aligner and methylation caller for Bisulfite-Seq applications.
+Krueger F1, Andrews SR.
+Bioinformatics. 2011 Jun 1;27(11):1571-2. doi: 10.1093/bioinformatics/btr167. Epub 2011 Apr 14.
+
+2-BS-SNPer: SNP calling in bisulfite-seq data.
+Gao S1, Zou D2, Mao L3, Liu H4, Song P5, Chen Y6, Zhao S7, Gao C8, Li X7, Gao Z7, Fang X7, Yang H7, Ørntoft TF9, Sørensen KD9, Bolund L1.Bioinformatics. 2015 Dec 15;31(24):4006-8. doi: 10.1093/bioinformatics/btv507. Epub 2015 Aug 28.
+
+3-A Bayesian hierarchical model to detect differentially methylated loci from single nucleotide resolution sequencing data.
+Feng H1, Conneely KN, Wu H.
+Nucleic Acids Res. 2014 Apr;42(8):e69. doi: 10.1093/nar/gku154. Epub 2014 Feb 22.
+
+4-methylKit: a comprehensive R package for the analysis of genome-wide DNA methylation profiles.
+Akalin A, Kormaksson M, Li S, Garrett-Bakelman FE, Figueroa ME, Melnick A, Mason CE.
+Genome Biol. 2012 Oct 3;13(10):R87. doi: 10.1186/gb-2012-13-10-r87.
