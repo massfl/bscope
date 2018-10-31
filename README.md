@@ -127,8 +127,11 @@ this function is automatically called when report = True in the BS_conversion() 
 **EXAMPLE:**
 
 In the following example we will:
+
 1-instanciate a BsCope object from two BS-Snper output txt files.
-2-Visualize CpG counts as function of read coverage
+
+2-Visualize CpG counts as a function of read coverage
+
 3-Run the conversion from BS-SNPer output files to DSS compatible files (A) and generate a visual report (B)
 
 1- bscope_test = BsCope(["/Users/username/bscope_test_file/bssnper_sample1.txt", "/Users/username/bscope_test_file/bssnper_sample2.txt"], "bssnper", ["sample1", "sample2"], "BSCope_test", "CG")
