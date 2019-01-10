@@ -7,7 +7,7 @@ bscope is designed to fulfill two needs encountered during BS-Seq studies:
 
 -First, often various computational tools used in pipeline are incompatible in terms of file structures. bscope transforms two widely used methylation count files; bssnper (post snp removal) (1) and bismark.cov (2) files and makes them compatible with two popular algorithms that test for differential methylation at cytosines: DSS(3)and methylkit(4).
 
--Second, it is often necessary to visualize the data to get a sense of their overall quality, to that end bscope may output a graphical report on read coverage and methylation levels, see the Coverage_plot() and BS_report() functions respectively.
+-Second, it is often necessary to visualize the data to get a sense of their overall quality, to that end bscope may output a graphical report of read coverage at cytosines and a statistical analysis: Number of cytosines analyzed per sample and per chromosome, Mean methylation percent per sample, Cytosine count per methyltion level, pearson correlation, PCA analysis (scree and PC1/2 plot); Please see the Coverage_plot() and BS_report() functions respectively.
 
 bscope accepts CpG or CpH methylation files
 
